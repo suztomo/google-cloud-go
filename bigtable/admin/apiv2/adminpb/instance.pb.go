@@ -21,13 +21,12 @@
 package adminpb
 
 import (
-	reflect "reflect"
-	sync "sync"
-
 	_ "google.golang.org/genproto/googleapis/api/annotations"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	timestamppb "google.golang.org/protobuf/types/known/timestamppb"
+	reflect "reflect"
+	sync "sync"
 )
 
 const (
@@ -1076,7 +1075,7 @@ type LogicalView struct {
 
 	// Identifier. The unique name of the logical view.
 	// Format:
-	// `projects/{project}/instances/{instance}/logicalViews/{logical_view}
+	// `projects/{project}/instances/{instance}/logicalViews/{logical_view}`
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	// Required. The logical view's select query.
 	Query string `protobuf:"bytes,2,opt,name=query,proto3" json:"query,omitempty"`
@@ -1146,7 +1145,7 @@ type MaterializedView struct {
 
 	// Identifier. The unique name of the materialized view.
 	// Format:
-	// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}
+	// `projects/{project}/instances/{instance}/materializedViews/{materialized_view}`
 	Name string `protobuf:"bytes,1,opt,name=name,proto3" json:"name,omitempty"`
 	// Required. Immutable. The materialized view's select query.
 	Query string `protobuf:"bytes,2,opt,name=query,proto3" json:"query,omitempty"`
